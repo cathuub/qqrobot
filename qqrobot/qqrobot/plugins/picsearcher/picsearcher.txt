@@ -1,0 +1,7 @@
+这图哪来的？
+ 支持的命令：
+  搜图 --> 启动搜寻功能
+ 注意事项:
+  nao/Ascii2d找Pixiv以及Twitter图,trace找番剧截图,iqdb找壁纸
+  不填的话默认nao
+
