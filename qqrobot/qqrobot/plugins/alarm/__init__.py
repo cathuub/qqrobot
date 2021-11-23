@@ -31,7 +31,7 @@ async def goto_sleep(country):
     sleep_message = Message(str)
 
     bot = nonebot.get_bot()
-    await bot.send_group_msg(group_id=869386880, message=sleep_message)
+    await bot.send_group_msg(group_id='这里输入需要提醒的群号', message=sleep_message)
 
 
 # 吃饭函数

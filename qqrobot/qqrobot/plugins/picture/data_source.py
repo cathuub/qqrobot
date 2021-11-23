@@ -38,6 +38,7 @@ async def get_pic(tags,num=1):
         setu_author = pic_json['data'][i]['author']
         setu_pid = pic_json['data'][i]['pid']
         setu_url = pic_json['data'][i]['urls']['original']
+        setu_url=setu_url[:16] + 're' + setu_url[16 + 3:]
         filename = setu_url.rindex('/')
         name = setu_url[filename + 1:]
         image_cq += f'画师:{setu_author}\npid:{setu_pid}[CQ:image,file={name},url={setu_url}]'
@@ -47,8 +48,11 @@ async def get_pic(tags,num=1):
 
 
 if __name__ == '__main__':#测试用
-    loop = asyncio.get_event_loop()
-    task = loop.create_task(get_pic(["白丝"]))
-    loop.run_until_complete(task)
-    loop.close()
-    print(task.result())
+    a="https://i.pixiv.cat/img-original/img/2021/05/22/00/05/11/89999127_p0.png"
+
+    print(a[:16] + 're' + a[16+3:])
+    # loop = asyncio.get_event_loop()
+    # task = loop.create_task(get_pic(["白丝"]))
+    # loop.run_until_complete(task)
+    # loop.close()
+    # print(task.result())
